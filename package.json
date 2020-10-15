@@ -1,0 +1,21 @@
+{
+  "name": "hentai-list-frontend",
+  "version": "1.0.0",
+  "description": "HentaiList frontend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "postbuild": "next-on-netlify",
+    "start": "next start"
+  },
+  "author": "turbo",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "next": "^9.5.5",
+    "next-on-netlify": "^2.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

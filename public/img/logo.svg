@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 861px;
+        font-family: PantonNarrowDemo-BlackItalic, "Panton Narrow";
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      .cls-1 {
+        fill: #a902ff;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <text id="L" class="cls-1" transform="translate(500.842 803.984) scale(0.995)">l</text>
+  <text id="H" class="cls-2" transform="translate(105.182 803.988) scale(0.995)">H</text>
+</svg>
