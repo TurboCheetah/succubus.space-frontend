@@ -7,22 +7,26 @@ import * as axios from 'axios'
 const Post = (props) => (
   <div>
     <Layout />
+    <div id='preloder'>
+      <div class='loader' />
+    </div>
     <header class='header'>
       <div class='container'>
         <div class='row'>
           <div class='col-lg-2'>
             <div class='header__logo'>
-            <Link href="/"><a>
-                <img width='50px'height='50px' src='/img/logo.png' alt='' />
-              </a></Link>
+              <Link href='/'><a>
+                <img width='50px' height='50px' src='/img/logo.png' alt='' />
+              </a>
+              </Link>
             </div>
           </div>
           <div class='col-lg-8'>
             <div class='header__nav'>
               <nav class='header__menu mobile-menu'>
                 <ul>
-                  <li class='active'><Link href="/"><a>Home</a></Link></li>
-{/*                   <li><a href='./categories.html'>Categories <span class='arrow_carrot-down' /></a>
+                  <li class='active'><Link href='/'><a>Home</a></Link></li>
+                  {/*                   <li><a href='./categories.html'>Categories <span class='arrow_carrot-down' /></a>
                     <ul class='dropdown'>
                       <li><a href='./categories.html'>Categories</a></li>
                       <li><a href='./anime-details.html'>Anime Details</a></li>
@@ -40,7 +44,7 @@ const Post = (props) => (
           <div class='col-lg-2'>
             <div class='header__right'>
               <a href='#' class='search-switch'><span class='icon_search' /></a>
-              <Link href="/login"><a><span class='icon_profile' /></a></Link>
+              <Link href='/login'><a><span class='icon_profile' /></a></Link>
             </div>
           </div>
         </div>
@@ -105,13 +109,13 @@ const Post = (props) => (
         <div class='row'>
           <div class='col-lg-3'>
             <div class='footer__logo'>
-              <Link href="/"><a><img width='100%' src='/img/logo-banner.png' alt='' /></a></Link>
+              <Link href='/'><a><img width='100%' src='/img/logo-banner.png' alt='' /></a></Link>
             </div>
           </div>
           <div class='col-lg-6'>
             <div class='footer__nav'>
               <ul>
-                <li class='active'><Link href="/"><a>Home</a></Link></li>
+                <li class='active'><Link href='/'><a>Home</a></Link></li>
                 {/* <li><a href='./categories.html'>Categories</a></li> */}
                 <li><a href='https://discord.gg/FFGrsWE'>Discord</a></li>
               </ul>
