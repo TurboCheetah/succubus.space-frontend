@@ -13,6 +13,9 @@ const Post = (props) => (
       description={
         props.description
       }
+      image={
+        props.poster
+      }
     />
     <div id='preloder'>
       <div class='loader' />

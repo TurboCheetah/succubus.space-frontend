@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 
-const Layout = ({ title, description, router }) => {
+const Layout = ({ title, description, image, router }) => {
   const url = router && router.asPath ? router.asPath : undefined
   const canonical = url && url === '/' ? 'hentailist.netlify.app' : 'hentailist.netlify.app' + url
   return (
@@ -10,7 +10,7 @@ const Layout = ({ title, description, router }) => {
       <Head>
         <meta charSet='UTF-8' />
         <meta name='description' content={description} />
-        <meta property='og:image' content='/img/logo.png' />
+        <meta property='og:image' content={image} />
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#a902ff' />
         <meta property='og:url' content={canonical} />
