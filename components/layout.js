@@ -8,9 +8,9 @@ const Layout = () => (
       <meta property='og:image' content='/img/logo.png' />
       <meta property='og:type' content='website' />
       <meta name="theme-color" content="#a902ff"/>
-      <meta property='og:url' content='https://umbra.turbo.ooo/' />
-      <meta property='og:title' content='Umbra' />
-      <meta property='og:description' content='Securely chat online with Umbra' />
+      <meta property='og:url' content='https://hentailist.netlify.app/' />
+      <meta property='og:title' content='HentaiList' />
+      <meta property='og:description' content='All the hentai you could ever want 😳' />
       <meta name='keywords' content='hentai' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
