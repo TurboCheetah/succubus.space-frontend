@@ -1,20 +1,25 @@
 import Head from 'next/head'
+import { withRouter } from 'next/router';
 
-const Layout = () => (
+const Layout = ({ title, description, router }) => {
+  const url = router && router.asPath ? router.asPath : undefined;
+  const canonical = url && url === '/' ? 'hentailist.netlify.app' : 'hentailist.netlify.app' + url;
+  return (
+  
   <div>
     <Head>
       <meta charSet='UTF-8' />
-      <meta name='description' content='HentaiList.net' />
+      <meta name='description' content={description} />
       <meta property='og:image' content='/img/logo.png' />
       <meta property='og:type' content='website' />
-      <meta name="theme-color" content="#a902ff"/>
-      <meta property='og:url' content='https://hentailist.netlify.app/' />
-      <meta property='og:title' content='HentaiList' />
-      <meta property='og:description' content='All the hentai you could ever want 😳' />
+      <meta name='theme-color' content='#a902ff' />
+      <meta property='og:url' content={canonical} />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
       <meta name='keywords' content='hentai' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
-      <title>HentaiList</title>
+      <title>{title}</title>
       <link href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap' rel='stylesheet' />
       <link
         href='https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap'
@@ -31,5 +36,5 @@ const Layout = () => (
     </Head>
   </div>
 )
-
-export default Layout
+  }
+export default withRouter(Layout)
