@@ -6,12 +6,14 @@ import * as axios from 'axios'
 
 const Post = (props) => (
   <div>
-    <Layout title={
+    <Layout
+      title={
       `HentaiList | ${props.name}`
-    }
-    description={
-      props.description
-    }/>
+      }
+      description={
+        props.description
+      }
+    />
     <div id='preloder'>
       <div class='loader' />
     </div>
