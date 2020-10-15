@@ -4,8 +4,14 @@ const Layout = () => (
   <div>
     <Head>
       <meta charSet='UTF-8' />
-      <meta name='description' content='Anime Template' />
-      <meta name='keywords' content='Anime, unica, creative, html' />
+      <meta name='description' content='HentaiList.net' />
+      <meta property='og:image' content='/img/logo.png' />
+      <meta property='og:type' content='website' />
+      <meta name="theme-color" content="#a902ff"/>
+      <meta property='og:url' content='https://umbra.turbo.ooo/' />
+      <meta property='og:title' content='Umbra' />
+      <meta property='og:description' content='Securely chat online with Umbra' />
+      <meta name='keywords' content='hentai' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
       <title>HentaiList</title>
