@@ -6,38 +6,28 @@ import * as axios from 'axios'
 
 const Post = (props) => (
   <div>
-    <Layout
-      title={
-      `HentaiList | ${props.name}`
-      }
-      description={
-        props.description
-      }
-      image={
-        props.poster
-      }
-    />
+    <Layout title={`HentaiList | ${props.name}`} description={props.description} image={props.poster} />
     <div id='preloder'>
-      <div class='loader' />
+      <div className='loader' />
     </div>
-    <header class='header'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-lg-2'>
-            <div class='header__logo'>
+    <header className='header'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-2'>
+            <div className='header__logo'>
               <Link href='/'><a>
                 <img width='50px' height='50px' src='/img/logo.png' alt='' />
               </a>
               </Link>
             </div>
           </div>
-          <div class='col-lg-8'>
-            <div class='header__nav'>
-              <nav class='header__menu mobile-menu'>
+          <div className='col-lg-8'>
+            <div className='header__nav'>
+              <nav className='header__menu mobile-menu'>
                 <ul>
-                  <li class='active'><Link href='/'><a>Home</a></Link></li>
-                  {/*                   <li><a href='./categories.html'>Categories <span class='arrow_carrot-down' /></a>
-                    <ul class='dropdown'>
+                  <li className='active'><Link href='/'><a>Home</a></Link></li>
+                  {/*                   <li><a href='./categories.html'>Categories <span className='arrow_carrot-down' /></a>
+                    <ul className='dropdown'>
                       <li><a href='./categories.html'>Categories</a></li>
                       <li><a href='./anime-details.html'>Anime Details</a></li>
                       <li><a href='./anime-watching.html'>Anime Watching</a></li>
@@ -51,10 +41,10 @@ const Post = (props) => (
               </nav>
             </div>
           </div>
-          <div class='col-lg-2'>
-            <div class='header__right'>
-              <a href='#' class='search-switch'><span class='icon_search' /></a>
-              <Link href='/login'><a><span class='icon_profile' /></a></Link>
+          <div className='col-lg-2'>
+            <div className='header__right'>
+              <a href='#' className='search-switch'><span className='icon_search' /></a>
+              <Link href='/login'><a><span className='icon_profile' /></a></Link>
             </div>
           </div>
         </div>
@@ -62,27 +52,27 @@ const Post = (props) => (
       </div>
     </header>
 
-    <section class='anime-details spad'>
-      <div class='container'>
-        <div class='anime__details__content'>
-          <div class='row'>
-            <div class='col-lg-3'>
-              <div class='anime__details__pic set-bg' data-setbg={props.poster}>
-                <div class='comment'><i class='fa fa-thumbs-up' /> {props.likes}</div>
-                <div class='view'><i class='fa fa-eye' /> {props.views}</div>
+    <section className='anime-details spad'>
+      <div className='container'>
+        <div className='anime__details__content'>
+          <div className='row'>
+            <div className='col-lg-3'>
+              <div className='anime__details__pic set-bg' data-setbg={props.poster}>
+                <div className='comment'><i className='fa fa-thumbs-up' /> {props.likes}</div>
+                <div className='view'><i className='fa fa-eye' /> {props.views}</div>
               </div>
             </div>
-            <div class='col-lg-9'>
-              <div class='anime__details__text'>
-                <div class='anime__details__title'>
+            <div className='col-lg-9'>
+              <div className='anime__details__text'>
+                <div className='anime__details__title'>
                   <h3>{props.name}</h3>
                   <span>{props.titles ? props.titles.join(', ') : ''}</span>
                 </div>
                 <p>{props.description ? props.description : 'No description available'}
                 </p>
-                <div class='anime__details__widget'>
-                  <div class='row'>
-                    <div class='col-lg-6 col-md-6'>
+                <div className='anime__details__widget'>
+                  <div className='row'>
+                    <div className='col-lg-6 col-md-6'>
                       <ul>
                         <li><span>Censored:</span> {props.censored}</li>
                         <li><span>Studios:</span> {props.brand ? props.brand : ''}</li>
@@ -90,7 +80,7 @@ const Post = (props) => (
                         <li><span>Genre:</span> {props.tags}</li>
                       </ul>
                     </div>
-                    <div class='col-lg-6 col-md-6'>
+                    <div className='col-lg-6 col-md-6'>
                       <ul>
                         <li><span>Likes/Dislikes:</span> {props.likes} / {props.dislikes}</li>
                         <li><span>Rank:</span> {props.rank}</li>
@@ -100,9 +90,9 @@ const Post = (props) => (
                     </div>
                   </div>
                 </div>
-                <div class='anime__details__btn'>
-                  <a href='#' class='follow-btn'><i class='fa fa-heart-o' /> Like</a>
-                  <a href={props.watch} class='follow-btn'>Watch Now <i class='fa fa-angle-right' /></a>
+                <div className='anime__details__btn'>
+                  <a href='#' className='follow-btn'><i className='fa fa-heart-o' /> Like</a>
+                  <a href={props.watch} className='follow-btn'>Watch Now <i className='fa fa-angle-right' /></a>
                 </div>
               </div>
             </div>
@@ -111,21 +101,21 @@ const Post = (props) => (
       </div>
     </section>
 
-    <footer class='footer'>
-      <div class='page-up'>
-        <a href='#' id='scrollToTopButton'><span class='arrow_carrot-up' /></a>
+    <footer className='footer'>
+      <div className='page-up'>
+        <a href='#' id='scrollToTopButton'><span className='arrow_carrot-up' /></a>
       </div>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-lg-3'>
-            <div class='footer__logo'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-3'>
+            <div className='footer__logo'>
               <Link href='/'><a><img width='100%' src='/img/logo-banner.png' alt='' /></a></Link>
             </div>
           </div>
-          <div class='col-lg-6'>
-            <div class='footer__nav'>
+          <div className='col-lg-6'>
+            <div className='footer__nav'>
               <ul>
-                <li class='active'><Link href='/'><a>Home</a></Link></li>
+                <li className='active'><Link href='/'><a>Home</a></Link></li>
                 {/* <li><a href='./categories.html'>Categories</a></li> */}
                 <li><a href='https://discord.gg/FFGrsWE'>Discord</a></li>
               </ul>
@@ -135,10 +125,10 @@ const Post = (props) => (
       </div>
     </footer>
 
-    <div class='search-model'>
-      <div class='h-100 d-flex align-items-center justify-content-center'>
-        <div class='search-close-switch'><i class='icon_close' /></div>
-        <form class='search-model-form'>
+    <div className='search-model'>
+      <div className='h-100 d-flex align-items-center justify-content-center'>
+        <div className='search-close-switch'><i className='icon_close' /></div>
+        <form className='search-model-form'>
           <input type='text' id='search-input' placeholder='Search here.....' />
         </form>
       </div>
@@ -151,7 +141,7 @@ Post.getInitialProps = async (request) => {
   try {
     const options = {
       method: 'GET',
-      url: `http://66.70.162.209:4445/api/hentai/${request.query.id}`,
+      url: `https://hentailist.turbo.ooo/api/hentai/${request.query.id}`,
       headers: {
         'content-type': 'application/json',
         accept: 'application/json'
