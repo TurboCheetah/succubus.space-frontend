@@ -22,7 +22,7 @@ Index.getInitialProps = async (request) => {
   try {
         const options = {
       method: 'GET',
-      url: `https://hentailist.turbo.oooo/api/hentai/1226`,
+      url: `https://hentailist.turbo.ooo/api/hentai/1226`,
       headers: {
         'content-type': 'application/json',
         accept: 'application/json'
