@@ -18,7 +18,7 @@ const Index = (props) => (
   </div>
 )
 
-Index.getInitialProps = async (request) => {
+Index.getInitialProps = async () => {
   try {
         const options = {
       method: 'GET',
