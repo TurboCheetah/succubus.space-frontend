@@ -1,25 +1,28 @@
+import Layout from '../components/layout'
+import Scripts from '../components/scripts'
+import Utils from '../utils'
+import Link from 'next/link'
 import * as axios from 'axios'
-import { useRouter } from 'next/router'
-const index = (props) => (
+
+const Index = (props) => (
   <div>
-    <h1>{props.name}</h1>
-    <h3>Alternate Titles: {props.titles.join(', ')}</h3>
-    <p>Downloads: {props.downloads}</p>
-    {props.malURL.length > 0 ? <p>{props.malURL}</p> : <p>Not listed on MAL</p>}
-    {getID()}
+    <Layout
+      title='HentaiList'
+      description='Have you ever wanted to find hentai? HentaiList puts it all in one elegant website!'
+      image='img/logo.png'
+    />
+    <div id='preloder'>
+      <div className='loader' />
+    </div>
+    <Scripts />
   </div>
 )
 
-function getID () {
-  const router = useRouter()
-  console.log(router.route)
-}
-
-index.getInitialProps = async () => {
+Index.getInitialProps = async (request) => {
   try {
-    const options = {
+        const options = {
       method: 'GET',
-      url: 'http://66.70.162.209:4445/api/hentai/1226',
+      url: `https://hentailist.turbo.oooo/api/hentai/1226`,
       headers: {
         'content-type': 'application/json',
         accept: 'application/json'
@@ -36,10 +39,19 @@ index.getInitialProps = async () => {
       name: data.name,
       titles: data.titles,
       description: data.description,
-      likes: data.likes,
-      dislikes: data.dislikes,
-      downloads: data.downloads,
-      malURL: data.malURL
+      watch: data.url,
+      views: data.views.toLocaleString(undefined),
+      likes: data.likes.toLocaleString(undefined),
+      dislikes: data.dislikes.toLocaleString(undefined),
+      downloads: data.downloads.toLocaleString(undefined),
+      malURL: data.malURL,
+      poster: data.cover_url,
+      brand: data.brand,
+      release: data.released_at,
+      tags: Utils.toProperCase(data.tags.join(', ')),
+      rank: data.monthly_rank.toLocaleString(undefined),
+      censored: Utils.toProperCase(data.is_censored.toString()),
+      duration: Utils.getDuration(data.duration_in_ms)
     }
   } catch (e) {
     console.error(e)
@@ -47,4 +59,4 @@ index.getInitialProps = async () => {
   }
 }
 
-export default index
+export default Index
