@@ -3,7 +3,7 @@ import { withRouter } from 'next/router'
 
 const Layout = ({ title, description, image, router }) => {
   const url = router && router.asPath ? router.asPath : undefined
-  const canonical = url && url === '/' ? 'hentailist.netlify.app' : 'hentailist.netlify.app' + url
+  const canonical = url && url === '/' ? 'succubus.space' : 'succubus.space' + url
   return (
 
     <div>

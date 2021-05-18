@@ -7,8 +7,8 @@ import * as axios from 'axios'
 const Index = (props) => (
   <div>
     <Layout
-      title='HentaiList'
-      description='Have you ever wanted to find hentai? HentaiList puts it all in one elegant website!'
+      title='Succubus.Space'
+      description='Have you ever wanted to find hentai? Succubus.Space puts it all in one elegant website!'
       image='img/logo.png'
     />
     <div id='preloder'>
@@ -22,7 +22,7 @@ Index.getInitialProps = async () => {
   try {
         const options = {
       method: 'GET',
-      url: `https://hentailist.turbo.ooo/api/hentai/1226`,
+      url: `https://api.succubus.space/hentai/1226`,
       headers: {
         'content-type': 'application/json',
         accept: 'application/json'

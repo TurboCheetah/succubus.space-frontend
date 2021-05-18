@@ -6,7 +6,7 @@ import * as axios from 'axios'
 
 const Post = (props) => (
   <div>
-    <Layout title={`HentaiList | ${props.name}`} description={props.description} image={props.poster} />
+    <Layout title={`Succubus.Space | ${props.name}`} description={props.description} image={props.poster} />
     <div id='preloder'>
       <div className='loader' />
     </div>
@@ -141,7 +141,7 @@ Post.getInitialProps = async (request) => {
   try {
     const options = {
       method: 'GET',
-      url: `https://hentailist.turbo.ooo/api/hentai/${request.query.id}`,
+      url: `https://api.succubus.space/hentai/${request.query.id}`,
       headers: {
         'content-type': 'application/json',
         accept: 'application/json'
