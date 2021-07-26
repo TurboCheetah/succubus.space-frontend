@@ -7,9 +7,6 @@ import * as axios from 'axios'
 const Post = (props) => (
   <div>
     <Layout title={`Succubus.Space | ${props.name}`} description={props.description} image={props.poster} />
-    <div id='preloder'>
-      <div className='loader' />
-    </div>
     <header className='header'>
       <div className='container'>
         <div className='row'>

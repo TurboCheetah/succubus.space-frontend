@@ -11,9 +11,6 @@ const Index = (props) => (
       description='Have you ever wanted to find hentai? Succubus.Space puts it all in one elegant website!'
       image='img/logo.png'
     />
-    <div id='preloder'>
-      <div className='loader' />
-    </div>
     <Scripts />
   </div>
 )
