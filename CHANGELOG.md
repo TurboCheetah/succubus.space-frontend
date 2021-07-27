@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/TurboCheetah/iTurbo/compare/v1.2.0...v1.3.0) (2021-07-27)
+
+
+### Features
+
+* optimizations ([0a5f0de](https://github.com/TurboCheetah/iTurbo/commit/0a5f0decb530746c422feb31f9a24fbc67dda23d))
+* switch to vercel ([ef356f0](https://github.com/TurboCheetah/iTurbo/commit/ef356f0a602b0b5edf0ebc6ed5697dbfc61fe1f5))
+* use eslint ([78b1b10](https://github.com/TurboCheetah/iTurbo/commit/78b1b100b953245b6464105fd5ab32b9aa05d2fe))
+
 ## 1.2.0 (2021-07-27)
 
 
