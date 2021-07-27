@@ -1,19 +1,46 @@
 {
   "name": "succubus-space-frontend",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "succubus.space frontend",
   "main": "index.js",
   "scripts": {
     "dev": "next",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "release": "standard-version",
+    "patch": "standard-version --release-as patch"
   },
-  "author": "turbo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TurboCheetah/iTurbo.git"
+  },
+  "author": "Turbo (turbo.ooo)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TurboCheetah/iTurbo/issues"
+  },
+  "homepage": "https://github.com/TurboCheetah/iTurbo",
   "dependencies": {
-    "axios": "^0.20.0",
+    "@aero/centra": "^1.0.6",
     "next": "^9.5.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "prettier": "^2.3.0",
+    "standard-version": "^9.3.0"
   }
 }
