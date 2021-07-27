@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 

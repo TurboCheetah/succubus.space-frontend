@@ -1,4 +1,5 @@
-import Layout from "../components/layout";
+/* eslint-disable no-unused-vars */
+import Layout from '../components/layout'
 
 const Index = () => (
   <div>
@@ -8,6 +9,6 @@ const Index = () => (
       image="img/logo.png"
     />
   </div>
-);
+)
 
-export default Index;
+export default Index
