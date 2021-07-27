@@ -52,12 +52,12 @@ const Entry = ({ data }) => {
               <div className="header__logo">
                 <Link href="/">
                   <a>
-                    <img
+                    {/* <img
                       width="50px"
                       height="50px"
                       src="/img/logo.png"
                       alt=""
-                    />
+                    /> */}
                   </a>
                 </Link>
               </div>
@@ -200,7 +200,7 @@ const Entry = ({ data }) => {
               <div className="footer__logo">
                 <Link href="/">
                   <a>
-                    <img width="100%" src="/img/logo-banner.png" alt="" />
+                    <img width="100%" src="/img/banner.png" alt="" />
                   </a>
                 </Link>
               </div>
