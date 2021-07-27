@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/TurboCheetah/succubus.space-frontend/compare/v1.3.1...v1.3.2) (2021-07-27)
+
+
+### Features
+
+* implement ISR ([33742f7](https://github.com/TurboCheetah/succubus.space-frontend/commit/33742f750b5231bf7747cfae87537e8a4595810f))
+
+
+### Bug Fixes
+
+* incorrect git URLs ([0031166](https://github.com/TurboCheetah/succubus.space-frontend/commit/0031166ece7b30b38299df4f020e1e9e04b83bca))
+
 ### [1.3.1](https://github.com/TurboCheetah/iTurbo/compare/v1.3.0...v1.3.1) (2021-07-27)
 
 
