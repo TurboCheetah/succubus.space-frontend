@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/TurboCheetah/iTurbo/compare/v1.3.0...v1.3.1) (2021-07-27)
+
+
+### Bug Fixes
+
+* delete package-lock due to Yarn usage ([b1970fe](https://github.com/TurboCheetah/iTurbo/commit/b1970fe17b074f3532a7574e59a1b2f2d83bcbd9))
+
 ## [1.3.0](https://github.com/TurboCheetah/iTurbo/compare/v1.2.0...v1.3.0) (2021-07-27)
 
 
