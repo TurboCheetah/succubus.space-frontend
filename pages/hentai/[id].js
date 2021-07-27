@@ -200,7 +200,7 @@ const Entry = ({ data }) => {
               <div className="footer__logo">
                 <Link href="/">
                   <a>
-                    <img width="100%" src="/img/banner.png" alt="" />
+                    {/* <img width="100%" src="/img/logo-banner.png" alt="" /> */}
                   </a>
                 </Link>
               </div>
