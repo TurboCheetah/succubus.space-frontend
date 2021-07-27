@@ -30,7 +30,6 @@ const Entry = ({ data }) => {
           title=''
           description=''
           image=''
-          thumbnail=''
         />
         <div id='preloder'>
           <div className='loader' />
@@ -44,8 +43,7 @@ const Entry = ({ data }) => {
       <Layout
         title={`Succubus.Space | ${data.name}`}
         description={data.description}
-        image="img/logo.png"
-        thumbnail={data.cover_url}
+        image={data.cover_url}
       />
       <header className="header">
         <div className="container">
