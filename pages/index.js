@@ -7,6 +7,7 @@ const Index = () => (
       title="Succubus.Space"
       description="Have you ever wanted to find hentai? Succubus.Space puts it all in one elegant website!"
       image="img/logo.png"
+      thumbnail=''
     />
   </div>
 )
