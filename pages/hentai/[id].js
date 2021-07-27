@@ -102,7 +102,7 @@ const Entry = ({ data }) => {
               <div className="col-lg-3">
                 <div
                   className="anime__details__pic set-bg"
-                  data-setbg={data.cover_url}
+                  style={{ 'background-image': `url(${data.cover_url})` }}
                 >
                   <div className="comment">
                     <i className="fa fa-thumbs-up" />{' '}
@@ -170,6 +170,16 @@ const Entry = ({ data }) => {
                     <a href={data.url} className="follow-btn">
                       Watch Now <i className="fa fa-angle-right" />
                     </a>
+                    <Link href={`${data.id - 1}`}>
+                    <a className="follow-btn">
+                    <i className="fa fa-angle-left" /> Back
+                    </a>
+                    </Link>
+                    <Link href={`${data.id + 1}`}>
+                    <a className="follow-btn">
+                      Next <i className="fa fa-angle-right" />
+                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
