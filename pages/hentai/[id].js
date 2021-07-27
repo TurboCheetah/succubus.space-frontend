@@ -4,16 +4,40 @@ import Layout from '../../components/layout'
 import Scripts from '../../components/scripts'
 // eslint-disable-next-line no-unused-vars
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Utils from '../../utils'
 import c from '@aero/centra'
 
-export const getServerSideProps = async (request) => {
-  const data = await c(`https://api.succubus.space/hentai/${request.query.id}`).json()
+export const getStaticPaths = async () => {
+  return { paths: [], fallback: true }
+}
 
-  return { props: { data } }
+export const getStaticProps = async (request) => {
+  const data = await c(`https://api.succubus.space/hentai/${request.params.id}`).json()
+
+  return {
+    props: { data }
+  }
 }
 
 const Entry = ({ data }) => {
+  const { isFallback } = useRouter()
+
+  if (isFallback) {
+    return (
+      <div>
+        <Layout
+          title='Succubus.Space'
+          description='Have you ever wanted to find hentai? Succubus.Space puts it all in one elegant website!'
+          image='img/logo.png'
+        />
+        <div id='preloder'>
+          <div className='loader' />
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div>
       <Layout
