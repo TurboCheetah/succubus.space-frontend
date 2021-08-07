@@ -15,6 +15,8 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (request) => {
   const data = await c(`https://api.succubus.space/hentai/${request.params.id}`).json()
 
+  if (data.invalid) return { notFound: true }
+
   return {
     props: { data }
   }
@@ -130,7 +132,7 @@ const Entry = ({ data }) => {
                         <ul>
                           <li>
                             <span>Censored:</span>{' '}
-                            {Utils.toProperCase(data.isCensored.toString())}
+                            {/* {Utils.toProperCase(data.isCensored.toString())} */}
                           </li>
                           <li>
                             <span>Studios:</span> {data.brand ? data.brand : ''}
