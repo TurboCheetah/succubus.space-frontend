@@ -43,7 +43,7 @@ const Entry = ({ data }) => {
       <Layout
         title={`Succubus.Space | ${data.name}`}
         description={data.description}
-        image={data.cover_url}
+        image={data.coverURL}
       />
       <header className="header">
         <div className="container">
@@ -102,7 +102,7 @@ const Entry = ({ data }) => {
               <div className="col-lg-3">
                 <div
                   className="anime__details__pic set-bg"
-                  style={{ 'background-image': `url(${data.cover_url})` }}
+                  style={{ backgroundImage: `url(${data.coverURL})` }}
                 >
                   <div className="comment">
                     <i className="fa fa-thumbs-up" />{' '}
@@ -130,13 +130,13 @@ const Entry = ({ data }) => {
                         <ul>
                           <li>
                             <span>Censored:</span>{' '}
-                            {Utils.toProperCase(data.is_censored.toString())}
+                            {Utils.toProperCase(data.isCensored.toString())}
                           </li>
                           <li>
                             <span>Studios:</span> {data.brand ? data.brand : ''}
                           </li>
                           <li>
-                            <span>Date aired:</span> {data.released_at}
+                            <span>Date aired:</span> {data.releasedAt}
                           </li>
                           <li>
                             <span>Genre:</span>{' '}
@@ -153,11 +153,11 @@ const Entry = ({ data }) => {
                           </li>
                           <li>
                             <span>Rank:</span>{' '}
-                            {data.monthly_rank.toLocaleString()}
+                            {data.monthlyRank.toLocaleString()}
                           </li>
                           <li>
                             <span>Duration:</span>{' '}
-                            {Utils.getDuration(data.duration_in_ms)}
+                            {Utils.getDuration(data.durationInMs)}
                           </li>
                           <li>
                             <span>Views:</span> {data.views.toLocaleString()}
