@@ -172,12 +172,12 @@ const Entry = ({ data }) => {
                     <a href={data.url} className="follow-btn">
                       Watch Now <i className="fa fa-angle-right" />
                     </a>
-                    <Link href={`${data.id - 1}`}>
+                    <Link href={`${-data.id - 1}`}>
                     <a className="follow-btn">
                     <i className="fa fa-angle-left" /> Back
                     </a>
                     </Link>
-                    <Link href={`${data.id + 1}`}>
+                    <Link href={`${+data.id + 1}`}>
                     <a className="follow-btn">
                       Next <i className="fa fa-angle-right" />
                     </a>
@@ -230,11 +230,11 @@ const Entry = ({ data }) => {
           <div className="search-close-switch">
             <i className="icon_close" />
           </div>
-          <form className="search-model-form">
+          <form className="search-model-form" onSubmit={() => this.replaceWith(`hentai/${document.getElementById('search-input').value}`)}>
             <input
               type="text"
               id="search-input"
-              placeholder="Search here....."
+              placeholder="Search here..."
             />
           </form>
         </div>
