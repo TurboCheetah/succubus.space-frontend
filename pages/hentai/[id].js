@@ -172,7 +172,7 @@ const Entry = ({ data }) => {
                     <a href={data.url} className="follow-btn">
                       Watch Now <i className="fa fa-angle-right" />
                     </a>
-                    <Link href={`${-data.id - 1}`}>
+                    <Link href={`${+data.id - 1}`}>
                     <a className="follow-btn">
                     <i className="fa fa-angle-left" /> Back
                     </a>
