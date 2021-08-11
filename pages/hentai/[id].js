@@ -138,7 +138,7 @@ const Entry = ({ data }) => {
                             <span>Studios:</span> {data.brand ? data.brand : ''}
                           </li>
                           <li>
-                            <span>Date aired:</span> {data.releasedAt}
+                            <span>Date aired:</span> {`${data.releasedAt.getFullYear()}-${('0' + (data.releasedAt.getMonth() + 1)).slice(-2)}-${('0' + data.releasedAt.getDate()).slice(-2)}`}
                           </li>
                           <li>
                             <span>Genre:</span>{' '}
