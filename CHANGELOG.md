@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/TurboCheetah/succubus.space-frontend/compare/v1.3.2...v1.4.0) (2021-08-12)
+
+
+### Features
+
+* add nav buttons & fix images not updating ([fb3a6a1](https://github.com/TurboCheetah/succubus.space-frontend/commit/fb3a6a10a957780a328bed2c3787eddc6a5acbbf))
+* cover images ([b50b240](https://github.com/TurboCheetah/succubus.space-frontend/commit/b50b2402e2d355ee6b64d6030fa1d28a00cbb3c2))
+* doujin supper ([2afe0d2](https://github.com/TurboCheetah/succubus.space-frontend/commit/2afe0d240bd096d1d4a7a4a2cd5e7c308710038b))
+* remove images that serve no purpose ([9000785](https://github.com/TurboCheetah/succubus.space-frontend/commit/900078560e43393f5d2b34dc83489fd020499cb0))
+* remove useless scripts ([f2bd885](https://github.com/TurboCheetah/succubus.space-frontend/commit/f2bd885c35bab0b6d02b849ab396802374f20a2c))
+* update dependencies ([d3dd7e9](https://github.com/TurboCheetah/succubus.space-frontend/commit/d3dd7e9f6ed8e836d2d85d735c7daa29f3bbba14))
+* use new API value ([7556972](https://github.com/TurboCheetah/succubus.space-frontend/commit/7556972e339f6bd86f7b957bb3a4d863db010cb9))
+
+
+### Bug Fixes
+
+* comment out image ([7470e53](https://github.com/TurboCheetah/succubus.space-frontend/commit/7470e538d0d6e688c890e0229317cd12c78dc912))
+* convert IDs to numbers ([baa3ced](https://github.com/TurboCheetah/succubus.space-frontend/commit/baa3ced8d44a79443529ebbfef57caeafee9fd14))
+* convert to date first, then parse ([de2e28e](https://github.com/TurboCheetah/succubus.space-frontend/commit/de2e28e3852ebaef9eaa4ec47b0a57e59f312fee))
+* return 404 if data is invalid ([117beeb](https://github.com/TurboCheetah/succubus.space-frontend/commit/117beeb37700c6d33a5bc1b19c167b47ff1aa90d))
+* use new API properties ([4f4a384](https://github.com/TurboCheetah/succubus.space-frontend/commit/4f4a38432b64f348023b77371680b8ddec057bfc))
+
 ### [1.3.2](https://github.com/TurboCheetah/succubus.space-frontend/compare/v1.3.1...v1.3.2) (2021-07-27)
 
 
