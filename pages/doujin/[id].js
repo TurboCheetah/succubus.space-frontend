@@ -47,6 +47,7 @@ const Entry = ({ data }) => {
           title=''
           description=''
           image=''
+          tw=''
         />
         <div id='preloder'>
           <div className='loader' />
@@ -60,7 +61,9 @@ const Entry = ({ data }) => {
     <div>
       <Layout
         title={`Succubus.Space | ${data.titles.pretty}`}
+        description={data.tags.join(', ')}
         image={data.cover}
+          tw='summary_large_image'
       />
       <header className="header">
         <div className="container">

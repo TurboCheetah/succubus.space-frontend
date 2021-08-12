@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 
-const Layout = ({ title, description, image, router }) => {
+const Layout = ({ title, description, image, tw, router }) => {
   const url = router && router.asPath ? router.asPath : undefined
   const canonical = url && url === '/' ? 'succubus.space' : 'succubus.space' + url
   return (
@@ -17,7 +17,7 @@ const Layout = ({ title, description, image, router }) => {
         <meta property='og:title' content={title} />
         <meta property='og:description' content={description} />
         <meta property='og:image' content={image} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name='twitter:card' content={tw} />
         <meta name='keywords' content='hentai' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />

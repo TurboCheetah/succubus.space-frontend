@@ -38,6 +38,7 @@ const Entry = ({ data }) => {
           title=''
           description=''
           image=''
+          tw=''
         />
         <div id='preloder'>
           <div className='loader' />
@@ -53,7 +54,8 @@ const Entry = ({ data }) => {
         title={`Succubus.Space | ${data.name}`}
         description={data.description}
         image={data.coverURL}
-      />
+        tw=''
+        />
       <header className="header">
         <div className="container">
           <div className="row">
