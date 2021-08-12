@@ -23,6 +23,12 @@ export const getStaticProps = async (request) => {
 }
 
 const Entry = ({ data }) => {
+  const aired = (releasedAt) => {
+    const date = new Date(releasedAt)
+
+    return `${date.getFullYear()}-${('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}`
+  }
+
   const { isFallback } = useRouter()
 
   if (isFallback) {
@@ -39,6 +45,7 @@ const Entry = ({ data }) => {
       </div>
     )
   }
+
 
   return (
     <div>
@@ -132,13 +139,13 @@ const Entry = ({ data }) => {
                         <ul>
                           <li>
                             <span>Censored:</span>{' '}
-                            {/* {Utils.toProperCase(data.isCensored.toString())} */}
+                            {Utils.toProperCase(data.isCensored.toString())}
                           </li>
                           <li>
                             <span>Studios:</span> {data.brand ? data.brand : ''}
                           </li>
                           <li>
-                            <span>Date aired:</span> {`${data.releasedAt.getFullYear()}-${('0' + (data.releasedAt.getMonth() + 1)).slice(-2)}-${('0' + data.releasedAt.getDate()).slice(-2)}`}
+                            <span>Date aired:</span> {aired(data.releasedAt)}
                           </li>
                           <li>
                             <span>Genre:</span>{' '}
