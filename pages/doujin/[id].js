@@ -59,7 +59,7 @@ const Entry = ({ data }) => {
   return (
     <div>
       <Layout
-        title={`Succubus.Space | ${data.titles.pretty}}`}
+        title={`Succubus.Space | ${data.titles.pretty}`}
         image={data.cover}
       />
       <header className="header">
