@@ -13,7 +13,26 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (request) => {
-  const data = await c(`https://api.succubus.space/doujin/${request.params.id}`).json()
+  const query = `
+  query {
+    doujin (${isNaN(+request.params.id) ? `name: ${request.params.id}` : `id: ${+request.params.id}`}) {
+      id
+      titles {
+        english
+        japanese
+        pretty
+      }
+      tags
+      cover
+      favorites
+      length
+      uploadDate
+      invalid
+    }
+  }
+  `
+
+  const { data: { doujin: data } } = await c('https://api.succubus.space/graphql', 'POST').body({ query }, 'json').json()
 
   if (data.invalid) return { notFound: true }
 
@@ -23,8 +42,8 @@ export const getStaticProps = async (request) => {
 }
 
 const Entry = ({ data }) => {
-  const aired = (releasedAt) => {
-    const date = new Date(releasedAt)
+  const aired = (uploadDate) => {
+    const date = new Date(uploadDate)
 
     return `${date.getFullYear()}-${('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}`
   }
