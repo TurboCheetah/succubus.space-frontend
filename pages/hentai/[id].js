@@ -15,7 +15,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (request) => {
   const query = `
   query {
-    hentai (${isNaN(+request.params.id) ? `name: ${request.params.id}` : `id: ${+request.params.id}`}) {
+    hentai (${isNaN(+request.params.id) ? `name: "${request.params.id}"` : `id: ${+request.params.id}`}) {
       id
       name
       titles
