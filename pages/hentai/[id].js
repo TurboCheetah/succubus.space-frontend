@@ -30,6 +30,7 @@ export const getStaticProps = async (request) => {
       tags
       monthlyRank
       durationInMs
+      url
       invalid
     }
   }
