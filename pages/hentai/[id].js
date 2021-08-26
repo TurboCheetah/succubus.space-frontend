@@ -17,7 +17,7 @@ export const getStaticProps = async (request) => {
   if (request.params.id === 'latest') {
     query = `
     query {
-      latest {
+      hentai: latest {
         id
         name
         titles
