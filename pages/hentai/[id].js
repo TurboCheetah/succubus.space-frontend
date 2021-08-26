@@ -13,7 +13,32 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (request) => {
-  const query = `
+  let query
+  if (request.params.id === 'latest') {
+    query = `
+    query {
+      latest {
+        id
+        name
+        titles
+        description
+        coverURL
+        likes
+        dislikes
+        views
+        isCensored
+        brand
+        releasedAt
+        tags
+        monthlyRank
+        durationInMs
+        url
+        invalid
+      }
+    }
+    `
+  } else {
+  query = `
   query {
     hentai (${isNaN(+request.params.id) ? `name: "${request.params.id}"` : `id: ${+request.params.id}`}) {
       id
@@ -35,6 +60,7 @@ export const getStaticProps = async (request) => {
     }
   }
   `
+}
 
   const { data: { hentai: data } } = await c('https://api.succubus.space/graphql', 'POST').body({ query }, 'json').json()
   
