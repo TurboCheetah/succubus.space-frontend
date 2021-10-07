@@ -81,7 +81,7 @@ const Entry = ({ data }) => {
       <Layout
         title={`Succubus.Space | ${data.titles.pretty}`}
         description={data.tags.join(', ')}
-        image={data.cover}
+        image={`https://external-content.duckduckgo.com/iu/?u=${data.cover}`}
           tw='summary_large_image'
       />
       <header className="header">
@@ -141,7 +141,7 @@ const Entry = ({ data }) => {
               <div className="col-lg-3">
                 <div
                   className="anime__details__pic set-bg"
-                  style={{ backgroundImage: `url(${data.cover})` }}
+                  style={{ backgroundImage: `url(https://external-content.duckduckgo.com/iu/?u=${data.cover})` }}
                 >
                   <div className="comment">
                     <i className="fa fa-thumbs-up" />{' '}
