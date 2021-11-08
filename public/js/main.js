@@ -33,11 +33,6 @@
   /* ------------------
         Background Set
     -------------------- */
-  $('.set-bg').each(function () {
-    var bg = $(this).data('setbg')
-    $(this).css('background-image', 'url(' + bg + ')')
-  })
-
   // Search model
   $('.search-switch').on('click', function () {
     $('.search-model').fadeIn(400)
