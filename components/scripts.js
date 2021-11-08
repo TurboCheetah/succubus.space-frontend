@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 const Scripts = () => (
   <div>
     <script src="/js/jquery-3.3.1.min.js" />

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-css-tags */
+/* eslint-disable @next/next/no-page-custom-font */
 // eslint-disable-next-line no-unused-vars
 import Head from 'next/head'
 import { withRouter } from 'next/router'
@@ -26,7 +28,6 @@ const Layout = ({ title, description, image, tw, router }) => {
         <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css" />
-        <link rel="stylesheet" href="/css/plyr.css" type="text/css" />
         <link rel="stylesheet" href="/css/nice-select.css" type="text/css" />
         <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css" />
         <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css" />
