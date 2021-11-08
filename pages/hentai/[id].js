@@ -6,64 +6,110 @@ import Scripts from '../../components/scripts'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Utils from '../../utils'
-import c from '@aero/centra'
+import { client } from '../../apolloClient'
+import gql from 'graphql-tag'
 
 export const getStaticPaths = async () => {
-  return { paths: [], fallback: true }
-}
-
-export const getStaticProps = async (request) => {
-  let query
-  if (request.params.id === 'latest') {
-    query = `
-    query {
-      hentai: latest {
-        id
-        name
-        titles
-        description
-        coverURL
-        likes
-        dislikes
-        views
-        isCensored
-        brand
-        releasedAt
-        tags
-        monthlyRank
-        durationInMs
-        url
-        invalid
+  const {
+    data: { latest }
+  } = await client.query({
+    query: gql`
+      query {
+        latest {
+          id
+        }
       }
-    }
     `
-  } else {
-  query = `
-  query {
-    hentai (${isNaN(+request.params.id) ? `name: "${request.params.id}"` : `id: ${+request.params.id}`}) {
-      id
-      name
-      titles
-      description
-      coverURL
-      likes
-      dislikes
-      views
-      isCensored
-      brand
-      releasedAt
-      tags
-      monthlyRank
-      durationInMs
-      url
-      invalid
-    }
+  })
+
+  const paths = []
+  for (let i = 1; i <= latest.id; i++) {
+    paths.push({ params: { id: `${i}` } })
   }
-  `
+
+  return { paths, fallback: true }
 }
 
-  const { data: { hentai: data } } = await c('https://api.succubus.space/graphql', 'POST').body({ query }, 'json').json()
-  
+export const getStaticProps = async ({ params }) => {
+  let query
+  let variables
+  if (params.id === 'latest') {
+    query = gql`
+      query {
+        hentai: latest {
+          id
+          name
+          titles
+          description
+          coverURL
+          likes
+          dislikes
+          views
+          isCensored
+          brand
+          releasedAt
+          tags
+          monthlyRank
+          durationInMs
+          url
+          invalid
+        }
+      }
+    `
+  } else if (isNaN(+params.id)) {
+    query = gql`
+      query hentai($name: String!) {
+        hentai(name: $name) {
+          id
+          name
+          titles
+          description
+          coverURL
+          likes
+          dislikes
+          views
+          isCensored
+          brand
+          releasedAt
+          tags
+          monthlyRank
+          durationInMs
+          url
+          invalid
+        }
+      }
+    `
+    variables = { name: params.id }
+  } else {
+    query = gql`
+      query hentai($id: Int!) {
+        hentai(id: $id) {
+          id
+          name
+          titles
+          description
+          coverURL
+          likes
+          dislikes
+          views
+          isCensored
+          brand
+          releasedAt
+          tags
+          monthlyRank
+          durationInMs
+          url
+          invalid
+        }
+      }
+    `
+    variables = { id: +params.id }
+  }
+
+  const {
+    data: { hentai: data }
+  } = await client.query({ query, variables })
+
   if (data.invalid) return { notFound: true }
 
   return {
@@ -72,7 +118,7 @@ export const getStaticProps = async (request) => {
 }
 
 const Entry = ({ data }) => {
-  const aired = (releasedAt) => {
+  const aired = releasedAt => {
     const date = new Date(releasedAt)
 
     return `${date.getFullYear()}-${('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}`
@@ -83,28 +129,17 @@ const Entry = ({ data }) => {
   if (isFallback) {
     return (
       <div>
-        <Layout
-          title=''
-          description=''
-          image=''
-          tw=''
-        />
-        <div id='preloder'>
-          <div className='loader' />
+        <Layout title="" description="" image="" tw="" />
+        <div id="preloder">
+          <div className="loader" />
         </div>
       </div>
     )
   }
 
-
   return (
     <div>
-      <Layout
-        title={`Succubus.Space | ${data.name}`}
-        description={data.description}
-        image={data.coverURL}
-        tw=''
-        />
+      <Layout title={`Succubus.Space | ${data.name}`} description={data.description} image={data.coverURL} tw="" />
       <header className="header">
         <div className="container">
           <div className="row">
@@ -160,13 +195,9 @@ const Entry = ({ data }) => {
           <div className="anime__details__content">
             <div className="row">
               <div className="col-lg-3">
-                <div
-                  className="anime__details__pic set-bg"
-                  style={{ backgroundImage: `url(${data.coverURL})` }}
-                >
+                <div className="anime__details__pic set-bg" style={{ backgroundImage: `url(${data.coverURL})` }}>
                   <div className="comment">
-                    <i className="fa fa-thumbs-up" />{' '}
-                    {data.likes.toLocaleString()}
+                    <i className="fa fa-thumbs-up" /> {data.likes.toLocaleString()}
                   </div>
                   <div className="view">
                     <i className="fa fa-eye" /> {data.views.toLocaleString()}
@@ -179,18 +210,13 @@ const Entry = ({ data }) => {
                     <h3>{data.name}</h3>
                     <span>{data.titles ? data.titles.join(', ') : ''}</span>
                   </div>
-                  <p>
-                    {data.description
-                      ? data.description
-                      : 'No description available'}
-                  </p>
+                  <p>{data.description ? data.description : 'No description available'}</p>
                   <div className="anime__details__widget">
                     <div className="row">
                       <div className="col-lg-6 col-md-6">
                         <ul>
                           <li>
-                            <span>Censored:</span>{' '}
-                            {Utils.toProperCase(data.isCensored.toString())}
+                            <span>Censored:</span> {Utils.toProperCase(data.isCensored.toString())}
                           </li>
                           <li>
                             <span>Studios:</span> {data.brand ? data.brand : ''}
@@ -199,25 +225,20 @@ const Entry = ({ data }) => {
                             <span>Date aired:</span> {aired(data.releasedAt)}
                           </li>
                           <li>
-                            <span>Genre:</span>{' '}
-                            {Utils.toProperCase(data.tags.join(', '))}
+                            <span>Genre:</span> {Utils.toProperCase(data.tags.join(', '))}
                           </li>
                         </ul>
                       </div>
                       <div className="col-lg-6 col-md-6">
                         <ul>
                           <li>
-                            <span>Likes/Dislikes:</span>{' '}
-                            {data.likes.toLocaleString()} /{' '}
-                            {data.dislikes.toLocaleString()}
+                            <span>Likes/Dislikes:</span> {data.likes.toLocaleString()} / {data.dislikes.toLocaleString()}
                           </li>
                           <li>
-                            <span>Rank:</span>{' '}
-                            {data.monthlyRank.toLocaleString()}
+                            <span>Rank:</span> {data.monthlyRank.toLocaleString()}
                           </li>
                           <li>
-                            <span>Duration:</span>{' '}
-                            {Utils.getDuration(data.durationInMs)}
+                            <span>Duration:</span> {Utils.getDuration(data.durationInMs)}
                           </li>
                           <li>
                             <span>Views:</span> {data.views.toLocaleString()}
@@ -231,14 +252,14 @@ const Entry = ({ data }) => {
                       Watch Now <i className="fa fa-angle-right" />
                     </a>
                     <Link href={`${+data.id - 1}`} scroll={false}>
-                    <a className="follow-btn">
-                    <i className="fa fa-angle-left" /> Back
-                    </a>
+                      <a className="follow-btn">
+                        <i className="fa fa-angle-left" /> Back
+                      </a>
                     </Link>
                     <Link href={`${+data.id + 1}`} scroll={false}>
-                    <a className="follow-btn">
-                      Next <i className="fa fa-angle-right" />
-                    </a>
+                      <a className="follow-btn">
+                        Next <i className="fa fa-angle-right" />
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -259,9 +280,7 @@ const Entry = ({ data }) => {
             <div className="col-lg-3">
               <div className="footer__logo">
                 <Link href="/">
-                  <a>
-                    {/* <img width="100%" src="/img/logo-banner.png" alt="" /> */}
-                  </a>
+                  <a>{/* <img width="100%" src="/img/logo-banner.png" alt="" /> */}</a>
                 </Link>
               </div>
             </div>
@@ -289,11 +308,7 @@ const Entry = ({ data }) => {
             <i className="icon_close" />
           </div>
           <form className="search-model-form" onSubmit={() => this.replaceWith(`hentai/${document.getElementById('search-input').value}`)}>
-            <input
-              type="text"
-              id="search-input"
-              placeholder="Search here..."
-            />
+            <input type="text" id="search-input" placeholder="Search here..." />
           </form>
         </div>
       </div>

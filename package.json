@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/TurboCheetah/succubus.space-frontend",
   "dependencies": {
-    "@aero/centra": "^1.0.7",
+    "@apollo/client": "^3.4.16",
+    "graphql": "15.0.0",
     "next": "^11.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
