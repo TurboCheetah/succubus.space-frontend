@@ -1,7 +1,8 @@
 FROM node:16-alpine
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn --prod && yarn cache clean
+COPY package.json yarn.lock .yarnrc.yml ./
+COPY .yarn/ .yarn/
+RUN yarn install --immutable
 COPY . .
 RUN yarn build
 EXPOSE 3000
