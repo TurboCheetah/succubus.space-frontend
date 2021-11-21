@@ -2928,7 +2928,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:<8.0.0":
+"eslint@npm:7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -3490,7 +3490,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^15.0.0":
+"graphql@npm:15.7.2":
   version: 15.7.2
   resolution: "graphql@npm:15.7.2"
   checksum: eacb746e2981d0c346ef7365601873963af5356f64ce4d890ab89d213c67bf5bc1ae957b93c3902198798774c842b55dff219f38bad858691765e4debc265750
@@ -6372,7 +6372,7 @@ __metadata:
     "@babel/core": 7.16.0
     "@next/eslint-plugin-next": 12.0.4
     babel-eslint: 10.1.0
-    eslint: <8.0.0
+    eslint: 7.32.0
     eslint-config-airbnb: 19.0.0
     eslint-config-next: 12.0.4
     eslint-config-prettier: 8.3.0
@@ -6385,7 +6385,7 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
-    graphql: ^15.0.0
+    graphql: 15.7.2
     next: 12
     prettier: 2.4.1
     react: ^17.0.2
