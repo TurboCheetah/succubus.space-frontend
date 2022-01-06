@@ -39,20 +39,25 @@ export const getStaticProps = async ({ params }) => {
         hentai: latest {
           id
           name
-          titles
+          titles {
+            title
+          }
           description
           coverURL
           likes
           dislikes
           views
           isCensored
-          brand
+          brand {
+            title
+          }
           releasedAt
-          tags
+          tags {
+            text
+          }
           monthlyRank
           durationInMs
           url
-          invalid
         }
       }
     `
@@ -62,44 +67,55 @@ export const getStaticProps = async ({ params }) => {
         hentai(name: $name) {
           id
           name
-          titles
+          titles {
+            title
+          }
           description
           coverURL
           likes
           dislikes
           views
           isCensored
-          brand
+          brand {
+            title
+          }
           releasedAt
-          tags
+          tags {
+            text
+          }
           monthlyRank
           durationInMs
           url
-          invalid
         }
       }
     `
     variables = { name: params.id }
   } else {
     query = gql`
-      query hentai($id: Int!) {
+      query hentai($id: Float!) {
         hentai(id: $id) {
           id
           name
-          titles
+          titles {
+            title
+          }
           description
           coverURL
           likes
           dislikes
           views
           isCensored
-          brand
+          brand {
+            title
+          }
           releasedAt
-          tags
+          tags {
+            text
+          }
           monthlyRank
           durationInMs
           url
-          invalid
+          malDescription
         }
       }
     `
@@ -110,7 +126,7 @@ export const getStaticProps = async ({ params }) => {
     data: { hentai: data }
   } = await client.query({ query, variables })
 
-  if (data.invalid) return { notFound: true }
+  if (!data) return { notFound: true }
 
   return {
     props: { data }
@@ -208,9 +224,9 @@ const Entry = ({ data }) => {
                 <div className="anime__details__text">
                   <div className="anime__details__title">
                     <h3>{data.name}</h3>
-                    <span>{data.titles ? data.titles.join(', ') : ''}</span>
+                    <span>{data.titles.length > 0 ? data.titles.map(title => title.title).join(', ') : ''}</span>
                   </div>
-                  <p>{data.description ? data.description : 'No description available'}</p>
+                  <p>{data.malDescription ? data.malDescription : data.description ? data.description : 'No description available'}</p>
                   <div className="anime__details__widget">
                     <div className="row">
                       <div className="col-lg-6 col-md-6">
@@ -219,13 +235,13 @@ const Entry = ({ data }) => {
                             <span>Censored:</span> {Utils.toProperCase(data.isCensored.toString())}
                           </li>
                           <li>
-                            <span>Studios:</span> {data.brand ? data.brand : ''}
+                            <span>Studios:</span> {data.brand.title ? data.brand.title : ''}
                           </li>
                           <li>
                             <span>Date aired:</span> {aired(data.releasedAt)}
                           </li>
                           <li>
-                            <span>Genre:</span> {Utils.toProperCase(data.tags.join(', '))}
+                            <span>Tags:</span> {Utils.toProperCase(data.tags.map(tag => tag.text).join(', '))}
                           </li>
                         </ul>
                       </div>
