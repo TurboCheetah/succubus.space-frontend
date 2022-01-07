@@ -27,19 +27,24 @@ export const getStaticProps = async ({ params }) => {
             japanese
             pretty
           }
-          tags
-          cover
+          tags {
+            all {
+              name
+            }
+          }
+          cover {
+            url
+          }
           favorites
           length
           uploadDate
-          invalid
         }
       }
     `
     variables = { name: params.id }
   } else {
     query = gql`
-      query doujin($id: Int!) {
+      query doujin($id: ID!) {
         doujin(id: $id) {
           id
           titles {
@@ -47,12 +52,17 @@ export const getStaticProps = async ({ params }) => {
             japanese
             pretty
           }
-          tags
-          cover
+          tags {
+            all {
+              name
+            }
+          }
+          cover {
+            url
+          }
           favorites
           length
           uploadDate
-          invalid
         }
       }
     `
@@ -101,7 +111,7 @@ const Entry = ({ data }) => {
 
   return (
     <div>
-      <Layout title={`Succubus.Space | ${data.titles.pretty}`} description={data.tags.join(', ')} image={`https://external-content.duckduckgo.com/iu/?u=${data.cover}`} tw="summary_large_image" />
+      <Layout title={`Succubus.Space | ${data.titles.pretty}`} description={data.tags.all.map(tag => tag.name).join(', ')} image={`https://api.succubus.space/proxy?url=${data.cover.url}`} tw="summary_large_image" />
       <header className="header">
         <div className="container">
           <div className="row">
@@ -160,7 +170,7 @@ const Entry = ({ data }) => {
                 <div
                   className="anime__details__pic set-bg"
                   style={{
-                    backgroundImage: `url(https://external-content.duckduckgo.com/iu/?u=${data.cover})`
+                    backgroundImage: `url(https://api.succubus.space/proxy?url=${data.cover.url})`
                   }}
                 >
                   <div className="comment">
@@ -186,7 +196,7 @@ const Entry = ({ data }) => {
                             <span>Released:</span> {aired(data.uploadDate)}
                           </li>
                           <li>
-                            <span>Tags:</span> {Utils.toProperCase(data.tags.join(', '))}
+                            <span>Tags:</span> {Utils.toProperCase(data.tags.all.map(tag => tag.name).join(', '))}
                           </li>
                         </ul>
                       </div>
