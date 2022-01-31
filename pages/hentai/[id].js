@@ -251,7 +251,7 @@ const Entry = ({ data }) => {
                             <span>Likes/Dislikes:</span> {data.likes.toLocaleString()} / {data.dislikes.toLocaleString()}
                           </li>
                           <li>
-                            <span>Rank:</span> {data.monthlyRank.toLocaleString()}
+                            <span>Rank:</span> {data.monthlyRank ? data.monthlyRank.toLocaleString() : 'N/A'}
                           </li>
                           <li>
                             <span>Duration:</span> {Utils.getDuration(data.durationInMs)}
