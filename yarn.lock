@@ -570,12 +570,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:12.1.3":
-  version: 12.1.3
-  resolution: "@next/eslint-plugin-next@npm:12.1.3"
+"@next/eslint-plugin-next@npm:12.1.4":
+  version: 12.1.4
+  resolution: "@next/eslint-plugin-next@npm:12.1.4"
   dependencies:
     glob: 7.1.7
-  checksum: b74886f372106213900e8eea2c38d51d9a23c915fc5287be0ada85cfdd3627167a14ec4512774b13fd3ebf8b80998f7551b1da7822d786f6dab65878a1c524e8
+  checksum: 6908d3ea066cc31a2353a198eb019bccb1158f032df8607568bb5ca17f84d271871e916e426f981eab08f2dbbc3df7a0ab00de2a8f14ed323492417e4f9d7903
   languageName: node
   linkType: hard
 
@@ -1857,11 +1857,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:12.1.3":
-  version: 12.1.3
-  resolution: "eslint-config-next@npm:12.1.3"
+"eslint-config-next@npm:12.1.4":
+  version: 12.1.4
+  resolution: "eslint-config-next@npm:12.1.4"
   dependencies:
-    "@next/eslint-plugin-next": 12.1.3
+    "@next/eslint-plugin-next": 12.1.4
     "@rushstack/eslint-patch": 1.0.8
     "@typescript-eslint/parser": 5.10.1
     eslint-import-resolver-node: 0.3.4
@@ -1877,7 +1877,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 2e171d3aa1c8753c9e02f5a31a10abcb29aa367437bf161b2e34546fcd04c1894e3a976fd7270b0b20c039c124c86e7c5b1cea7c8b01fe58cb501e8b22441f4d
+  checksum: 913a1b938a35886efebe3c909175ac47b26499d75ddd33cdab4d66eeaac5fdbbad1ef22c601b8f87ef562dee4c2685335fbced356c4a6dc270b7c293a43fd220
   languageName: node
   linkType: hard
 
@@ -3886,12 +3886,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.6.1":
-  version: 2.6.1
-  resolution: "prettier@npm:2.6.1"
+"prettier@npm:2.6.2":
+  version: 2.6.2
+  resolution: "prettier@npm:2.6.2"
   bin:
     prettier: bin-prettier.js
-  checksum: 78be1f8a3ddfad7c3d8a854b6c8941a3bb1ddfca4225c38d778e0fe1029a55368f71b3bbefff82c689015fbb4d391ec44add957f01308ad2725e01a7c1f37cb6
+  checksum: 48d08dde8e9fb1f5bccdd205baa7f192e9fc8bc98f86e1b97d919de804e28c806b0e6cc685e4a88211aa7987fa9668f30baae19580d87ced3ed0f2ec6572106f
   languageName: node
   linkType: hard
 
@@ -4528,11 +4528,11 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.4.17
     "@babel/core": 7.17.8
-    "@next/eslint-plugin-next": 12.1.3
+    "@next/eslint-plugin-next": 12.1.4
     babel-eslint: 10.1.0
     eslint: 7.32.0
     eslint-config-airbnb: 19.0.4
-    eslint-config-next: 12.1.3
+    eslint-config-next: 12.1.4
     eslint-config-prettier: 8.5.0
     eslint-config-standard: 16.0.3
     eslint-plugin-html: 6.2.0
@@ -4545,7 +4545,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.4.0
     graphql: 15.8.0
     next: 12.1
-    prettier: 2.6.1
+    prettier: 2.6.2
     react: ^17.0.2
     react-dom: ^17.0.2
     standard-version: 9.3.2
