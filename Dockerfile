@@ -35,7 +35,7 @@ COPY . .
 
 RUN yarn build
 
-FROM gcr.io/distroless/nodejs:16 as runner
+FROM gcr.io/distroless/nodejs:18 as runner
 
 WORKDIR /app
 
