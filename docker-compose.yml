@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   succubus.space-frontend:
-    image: ghcr.io/turbocheetah/succubus.space-frontend:latest
+    image: ghcr.io/turbocheetah/succubus.space-frontend:master
     container_name: succubus.space-frontend
     ports:
       - '3000:3000'
