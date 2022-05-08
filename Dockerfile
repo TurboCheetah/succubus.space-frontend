@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN npm i -g pnpm
-RUN pnpm i --prod --frozen-lockfile
+RUN npm i -g pnpm \
+    && pnpm i --prod --frozen-lockfile
 
 ENV GROUP=nodejs
 ENV USER=nextjs
@@ -15,8 +15,8 @@ ENV GID=1001
 RUN addgroup \
     --system \
     --gid "${GID}" \
-    "${GROUP}"
-RUN adduser \
+    "${GROUP}" \
+    && adduser \
     --system \
     --disabled-password \
     --gecos "" \
