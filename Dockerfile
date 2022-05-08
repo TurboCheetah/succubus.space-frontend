@@ -2,14 +2,10 @@ FROM node:18-alpine AS deps
 
 WORKDIR /app
 
-COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn/ .yarn/
+COPY package.json pnpm-lock.yaml ./
 
-RUN yarn install --immutable
-
-FROM node:18-alpine AS builder
-
-WORKDIR /app
+RUN npm i -g pnpm
+RUN pnpm i --prod --frozen-lockfile
 
 ENV GROUP=nodejs
 ENV USER=nextjs
@@ -30,10 +26,9 @@ RUN adduser \
     --uid "${UID}" \
     "${USER}"
 
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-RUN yarn build
+RUN pnpm build
 
 FROM gcr.io/distroless/nodejs:18 as runner
 
@@ -42,12 +37,12 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-COPY --from=builder /etc/passwd /etc/passwd
-COPY --from=builder /etc/group /etc/group
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=deps /etc/passwd /etc/passwd
+COPY --from=deps /etc/group /etc/group
+COPY --from=deps /app/package.json ./package.json
+COPY --from=deps /app/public ./public
+COPY --from=deps --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=deps --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 
