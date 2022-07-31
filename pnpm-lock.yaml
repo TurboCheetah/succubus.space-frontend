@@ -10,7 +10,7 @@ specifiers:
   eslint-config-next: 12.2.3
   eslint-config-prettier: 8.5.0
   eslint-config-standard: 17.0.0
-  eslint-plugin-html: 7.0.0
+  eslint-plugin-html: 7.1.0
   eslint-plugin-import: 2.26.0
   eslint-plugin-jsx-a11y: 6.6.1
   eslint-plugin-n: 15.2.4
@@ -43,7 +43,7 @@ devDependencies:
   eslint-config-next: 12.2.3_he2ccbldppg44uulnyq4rwocfa
   eslint-config-prettier: 8.5.0_eslint@8.20.0
   eslint-config-standard: 17.0.0_aabay5xq26dqolh67bnodxi5n4
-  eslint-plugin-html: 7.0.0
+  eslint-plugin-html: 7.1.0
   eslint-plugin-import: 2.26.0_eslint@8.20.0
   eslint-plugin-jsx-a11y: 6.6.1_eslint@8.20.0
   eslint-plugin-n: 15.2.4_eslint@8.20.0
@@ -1478,8 +1478,8 @@ packages:
       regexpp: 3.2.0
     dev: true
 
-  /eslint-plugin-html/7.0.0:
-    resolution: {integrity: sha512-pp/teAJClEnv6GJs2QG6FGZKg9mojn6h0IvZZlTNrbQOyDlYqb0GK4kjjsoH2SEGoH2Ub8EhPUpOxXEcnfO8JQ==}
+  /eslint-plugin-html/7.1.0:
+    resolution: {integrity: sha512-fNLRraV/e6j8e3XYOC9xgND4j+U7b1Rq+OygMlLcMg+wI/IpVbF+ubQa3R78EjKB9njT6TQOlcK5rFKBVVtdfg==}
     dependencies:
       htmlparser2: 8.0.1
     dev: true
