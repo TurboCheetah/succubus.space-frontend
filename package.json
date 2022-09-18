@@ -30,10 +30,10 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.19.0",
-    "@babel/eslint-parser": "7.18.9",
+    "@babel/core": "7.19.1",
+    "@babel/eslint-parser": "7.19.1",
     "@next/eslint-plugin-next": "12.3.0",
-    "eslint": "8.23.0",
+    "eslint": "8.23.1",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-next": "12.3.0",
     "eslint-config-prettier": "8.5.0",
