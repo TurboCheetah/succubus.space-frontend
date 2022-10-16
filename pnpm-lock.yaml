@@ -16,8 +16,8 @@ specifiers:
   eslint-plugin-n: 15.3.0
   eslint-plugin-node: 11.1.0
   eslint-plugin-prettier: 4.2.1
-  eslint-plugin-promise: 6.0.1
-  eslint-plugin-react: 7.31.8
+  eslint-plugin-promise: 6.1.0
+  eslint-plugin-react: 7.31.10
   eslint-plugin-react-hooks: 4.6.0
   graphql: 15.8.0
   next: '12.3'
@@ -39,18 +39,18 @@ devDependencies:
   '@babel/eslint-parser': 7.19.1_v37dtiefj2fmp2s4n57pt7n35y
   '@next/eslint-plugin-next': 12.3.1
   eslint: 8.25.0
-  eslint-config-airbnb: 19.0.4_v2i5dxghnxxivgrpk6rdvi5epy
+  eslint-config-airbnb: 19.0.4_4ces55zid76bgvayjtslcl5sne
   eslint-config-next: 12.3.1_z4bbprzjrhnsfa24uvmcbu7f5q
   eslint-config-prettier: 8.5.0_eslint@8.25.0
-  eslint-config-standard: 17.0.0_a432y4gghichzqs5hexeiieuzm
+  eslint-config-standard: 17.0.0_qjhcey4ofknbrbveepk4bditci
   eslint-plugin-html: 7.1.0
   eslint-plugin-import: 2.26.0_eslint@8.25.0
   eslint-plugin-jsx-a11y: 6.6.1_eslint@8.25.0
   eslint-plugin-n: 15.3.0_eslint@8.25.0
   eslint-plugin-node: 11.1.0_eslint@8.25.0
   eslint-plugin-prettier: 4.2.1_hvbqyfstm4urdpm6ffpwfka4e4
-  eslint-plugin-promise: 6.0.1_eslint@8.25.0
-  eslint-plugin-react: 7.31.8_eslint@8.25.0
+  eslint-plugin-promise: 6.1.0_eslint@8.25.0
+  eslint-plugin-react: 7.31.10_eslint@8.25.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.25.0
   prettier: 2.7.1
   standard-version: 9.5.0
@@ -1332,7 +1332,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-config-airbnb/19.0.4_v2i5dxghnxxivgrpk6rdvi5epy:
+  /eslint-config-airbnb/19.0.4_4ces55zid76bgvayjtslcl5sne:
     resolution: {integrity: sha512-T75QYQVQX57jiNgpF9r1KegMICE94VYwoFQyMGhrvc+lB8YF2E/M/PYDaQe1AJcWaEgqLE+ErXV1Og/+6Vyzew==}
     engines: {node: ^10.12.0 || ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1346,7 +1346,7 @@ packages:
       eslint-config-airbnb-base: 15.0.0_fyln4uq2tv75svthy6prqvt6lm
       eslint-plugin-import: 2.26.0_eslint@8.25.0
       eslint-plugin-jsx-a11y: 6.6.1_eslint@8.25.0
-      eslint-plugin-react: 7.31.8_eslint@8.25.0
+      eslint-plugin-react: 7.31.10_eslint@8.25.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.25.0
       object.assign: 4.1.2
       object.entries: 1.1.5
@@ -1369,7 +1369,7 @@ packages:
       eslint-import-resolver-typescript: 2.7.1_fyln4uq2tv75svthy6prqvt6lm
       eslint-plugin-import: 2.26.0_v73n4lz3vab4efhnhfxmxbq5ha
       eslint-plugin-jsx-a11y: 6.6.1_eslint@8.25.0
-      eslint-plugin-react: 7.31.8_eslint@8.25.0
+      eslint-plugin-react: 7.31.10_eslint@8.25.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.25.0
       typescript: 4.8.4
     transitivePeerDependencies:
@@ -1386,7 +1386,7 @@ packages:
       eslint: 8.25.0
     dev: true
 
-  /eslint-config-standard/17.0.0_a432y4gghichzqs5hexeiieuzm:
+  /eslint-config-standard/17.0.0_qjhcey4ofknbrbveepk4bditci:
     resolution: {integrity: sha512-/2ks1GKyqSOkH7JFvXJicu0iMpoojkwB+f5Du/1SC0PtBL+s8v30k9njRZ21pm2drKYm2342jFnGWzttxPmZVg==}
     peerDependencies:
       eslint: ^8.0.1
@@ -1397,7 +1397,7 @@ packages:
       eslint: 8.25.0
       eslint-plugin-import: 2.26.0_eslint@8.25.0
       eslint-plugin-n: 15.3.0_eslint@8.25.0
-      eslint-plugin-promise: 6.0.1_eslint@8.25.0
+      eslint-plugin-promise: 6.1.0_eslint@8.25.0
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
@@ -1639,8 +1639,8 @@ packages:
       prettier-linter-helpers: 1.0.0
     dev: true
 
-  /eslint-plugin-promise/6.0.1_eslint@8.25.0:
-    resolution: {integrity: sha512-uM4Tgo5u3UWQiroOyDEsYcVMOo7re3zmno0IZmB5auxoaQNIceAbXEkSt8RNrKtaYehARHG06pYK6K1JhtP0Zw==}
+  /eslint-plugin-promise/6.1.0_eslint@8.25.0:
+    resolution: {integrity: sha512-NYCfDZF/KHt27p06nFAttgWuFyIDSUMnNaJBIY1FY9GpBFhdT2vMG64HlFguSgcJeyM5by6Yr5csSOuJm60eXQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
@@ -1657,8 +1657,8 @@ packages:
       eslint: 8.25.0
     dev: true
 
-  /eslint-plugin-react/7.31.8_eslint@8.25.0:
-    resolution: {integrity: sha512-5lBTZmgQmARLLSYiwI71tiGVTLUuqXantZM6vlSY39OaDSV0M7+32K5DnLkmFrwTe+Ksz0ffuLUC91RUviVZfw==}
+  /eslint-plugin-react/7.31.10_eslint@8.25.0:
+    resolution: {integrity: sha512-e4N/nc6AAlg4UKW/mXeYWd3R++qUano5/o+t+wnWxIf+bLsOaH3a4q74kX3nDjYym3VBN4HyO9nEn1GcAqgQOA==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
