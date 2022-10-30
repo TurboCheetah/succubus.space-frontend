@@ -32,10 +32,10 @@
   "devDependencies": {
     "@babel/core": "7.19.6",
     "@babel/eslint-parser": "7.19.1",
-    "@next/eslint-plugin-next": "12.3.1",
+    "@next/eslint-plugin-next": "12.3.2",
     "eslint": "8.26.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-next": "12.3.1",
+    "eslint-config-next": "12.3.2",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-html": "7.1.0",

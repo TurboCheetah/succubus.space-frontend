@@ -4,10 +4,10 @@ specifiers:
   '@apollo/client': ^3.4.17
   '@babel/core': 7.19.6
   '@babel/eslint-parser': 7.19.1
-  '@next/eslint-plugin-next': 12.3.1
+  '@next/eslint-plugin-next': 12.3.2
   eslint: 8.26.0
   eslint-config-airbnb: 19.0.4
-  eslint-config-next: 12.3.1
+  eslint-config-next: 12.3.2
   eslint-config-prettier: 8.5.0
   eslint-config-standard: 17.0.0
   eslint-plugin-html: 7.1.0
@@ -37,10 +37,10 @@ dependencies:
 devDependencies:
   '@babel/core': 7.19.6
   '@babel/eslint-parser': 7.19.1_lz6pjk7mo2w5fzem2eded7dzpy
-  '@next/eslint-plugin-next': 12.3.1
+  '@next/eslint-plugin-next': 12.3.2
   eslint: 8.26.0
   eslint-config-airbnb: 19.0.4_43j2huhpnx3hffntymctaqzhgq
-  eslint-config-next: 12.3.1_wyqvi574yv7oiwfeinomdzmc3m
+  eslint-config-next: 12.3.2_wyqvi574yv7oiwfeinomdzmc3m
   eslint-config-prettier: 8.5.0_eslint@8.26.0
   eslint-config-standard: 17.0.0_43wwz2xsig5yhgcv2rleettsby
   eslint-plugin-html: 7.1.0
@@ -384,8 +384,8 @@ packages:
     resolution: {integrity: sha512-PTJpjAFVbzBQ9xXpzMTroShvD5YDIIy46jQ7d4LrWpY+/5a8H90Tm8hE3Hvkc5RBRspVo7kvEOnqQms0A+2Q6w==}
     dev: false
 
-  /@next/eslint-plugin-next/12.3.1:
-    resolution: {integrity: sha512-sw+lTf6r6P0j+g/n9y4qdWWI2syPqZx+uc0+B/fRENqfR3KpSid6MIKqc9gNwGhJASazEQ5b3w8h4cAET213jw==}
+  /@next/eslint-plugin-next/12.3.2:
+    resolution: {integrity: sha512-Jx0BIS9STamGSbA+vgTxPAi1mRcq4DoH/5kPMs0PFLFi542mmIKUUtYWB61bI+G6KPMTqejYmO3zi+SF6tzGYg==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -1348,8 +1348,8 @@ packages:
       object.entries: 1.1.5
     dev: true
 
-  /eslint-config-next/12.3.1_wyqvi574yv7oiwfeinomdzmc3m:
-    resolution: {integrity: sha512-EN/xwKPU6jz1G0Qi6Bd/BqMnHLyRAL0VsaQaWA7F3KkjAgZHi4f1uL1JKGWNxdQpHTW/sdGONBd0bzxUka/DJg==}
+  /eslint-config-next/12.3.2_wyqvi574yv7oiwfeinomdzmc3m:
+    resolution: {integrity: sha512-ir8t3wRNexUMSKsMNh7J1EWwiBAr2dd015UAiCFvQ/01MRBPmFof1C6PFh/RqlupwamSZlv6j8gfaV1RxHuRoQ==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -1357,7 +1357,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 12.3.1
+      '@next/eslint-plugin-next': 12.3.2
       '@rushstack/eslint-patch': 1.1.3
       '@typescript-eslint/parser': 5.22.0_wyqvi574yv7oiwfeinomdzmc3m
       eslint: 8.26.0
