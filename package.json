@@ -39,17 +39,17 @@
     "eslint-config-prettier": "8.6.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-html": "7.1.0",
-    "eslint-plugin-import": "2.27.4",
+    "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-n": "15.6.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-react": "7.32.0",
+    "eslint-plugin-react": "7.32.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.8.3",
     "standard-version": "9.5.0",
     "typescript": "4.9.4"
   },
-  "packageManager": "pnpm@7.25.0"
+  "packageManager": "pnpm@7.25.1"
 }
