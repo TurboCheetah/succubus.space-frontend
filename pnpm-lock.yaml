@@ -28,11 +28,11 @@ specifiers:
   typescript: 5.0.2
 
 dependencies:
-  '@apollo/client': 3.6.2_lmjnq3ph2nsklraebioucmn5oi
+  '@apollo/client': 3.6.2_o264z5epwuajru7y4dsijkqr44
   graphql: 15.8.0
-  next: 13.2.4_twbj6jx6q7zhqut6crrwyrekka
-  react: 18.1.0
-  react-dom: 18.1.0_react@18.1.0
+  next: 13.2.4_c6daxtsbknbe5e624mpp4wionm
+  react: 18.2.0
+  react-dom: 18.1.0_react@18.2.0
 
 devDependencies:
   '@babel/core': 7.21.3
@@ -65,7 +65,7 @@ packages:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
 
-  /@apollo/client/3.6.2_lmjnq3ph2nsklraebioucmn5oi:
+  /@apollo/client/3.6.2_o264z5epwuajru7y4dsijkqr44:
     resolution: {integrity: sha512-DNWyl+NNU2VsfHtXwOr4rV9hnQFPkl2/dNXeouhk9q7bXCWdEh3K8YTt/frULGVKbQjtnlPmz8C+LFI/JZ2N3w==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -89,11 +89,11 @@ packages:
       hoist-non-react-statics: 3.3.2
       optimism: 0.16.1
       prop-types: 15.8.1
-      react: 18.1.0
+      react: 18.2.0
       symbol-observable: 4.0.0
       ts-invariant: 0.10.2
       tslib: 2.4.0
-      use-sync-external-store: 1.1.0_react@18.1.0
+      use-sync-external-store: 1.1.0_react@18.2.0
       zen-observable-ts: 1.2.3
     dev: false
 
@@ -2255,7 +2255,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.15.4
+      uglify-js: 3.17.4
     dev: true
 
   /hard-rejection/2.1.0:
@@ -2822,7 +2822,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next/13.2.4_twbj6jx6q7zhqut6crrwyrekka:
+  /next/13.2.4_c6daxtsbknbe5e624mpp4wionm:
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -2847,9 +2847,9 @@ packages:
       '@swc/helpers': 0.4.14
       caniuse-lite: 1.0.30001468
       postcss: 8.4.14
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
-      styled-jsx: 5.1.1_smjhax6oafd2u664mty4aljy34
+      react: 18.2.0
+      react-dom: 18.1.0_react@18.2.0
+      styled-jsx: 5.1.1_ogvc6ewgr3qq5z6tmbtquhqyui
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.2.4
       '@next/swc-android-arm64': 13.2.4
@@ -3204,21 +3204,21 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /react-dom/18.1.0_react@18.1.0:
+  /react-dom/18.1.0_react@18.2.0:
     resolution: {integrity: sha512-fU1Txz7Budmvamp7bshe4Zi32d0ll7ect+ccxNu9FlObT605GOEB8BfO4tmRJ39R5Zj831VCpvQ05QPBW5yb+w==}
     peerDependencies:
       react: ^18.1.0
     dependencies:
       loose-envify: 1.4.0
-      react: 18.1.0
+      react: 18.2.0
       scheduler: 0.22.0
     dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  /react/18.1.0:
-    resolution: {integrity: sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==}
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -3588,7 +3588,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-jsx/5.1.1_smjhax6oafd2u664mty4aljy34:
+  /styled-jsx/5.1.1_ogvc6ewgr3qq5z6tmbtquhqyui:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -3603,7 +3603,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.3
       client-only: 0.0.1
-      react: 18.1.0
+      react: 18.2.0
     dev: false
 
   /supports-color/5.5.0:
@@ -3765,8 +3765,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.15.4:
-    resolution: {integrity: sha512-vMOPGDuvXecPs34V74qDKk4iJ/SN4vL3Ow/23ixafENYvtrNvtbcgUeugTcUGRGsOF/5fU8/NYSL5Hyb3l1OJA==}
+  /uglify-js/3.17.4:
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
@@ -3798,12 +3798,12 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /use-sync-external-store/1.1.0_react@18.1.0:
+  /use-sync-external-store/1.1.0_react@18.2.0:
     resolution: {integrity: sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 18.1.0
+      react: 18.2.0
     dev: false
 
   /util-deprecate/1.0.2:
